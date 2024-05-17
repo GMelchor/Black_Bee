@@ -1,9 +1,13 @@
 import React from "react";
-import Login from "./pages/Login/Login"
+import Login from "./pages/Login/Login";
+import NavOptions from "./pages/NavOpciones/NavOptions";
 
 function App() {
   return (
-    <Login/>
+    <div>
+      {/*<Login/>*/}
+      <NavOptions/>
+    </div>
   );
 }
 

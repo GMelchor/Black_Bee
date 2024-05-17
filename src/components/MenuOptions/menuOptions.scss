@@ -1,0 +1,21 @@
+.menuOptions {
+  background: white;
+
+  text-align: center;
+  align-items: center;
+  .grid-btns {
+    justify-content: space-between;
+    Button {
+      color: black;
+      border-radius: 5px;
+      border-color: black;
+      width: 5rem;
+      height: 5rem;
+      margin: 1rem 1rem 1rem 1rem;
+      font-size: 10rem;
+      .icon {
+        
+      }
+    }
+  }
+}

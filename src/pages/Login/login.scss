@@ -1,27 +1,20 @@
-body {
-  background-color: #FFC14C;
-  height: 95vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-h1{
-    text-align: center;
-
+h1 {
+  text-align: center;
 }
 
 .login {
   .login-container {
+    justify-content: center;
     background-color: white;
     width: 300px;
     text-align: center;
+    margin-top: 10rem;
     padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 
     .txt {
       margin: auto;
@@ -32,13 +25,13 @@ h1{
     .btn {
       width: 90%;
       margin-top: 25px;
-      background-color: #FFC14C;
+      background-color: #ffc14c;
       color: black;
       font-weight: bold;
 
       &:hover {
         background-color: black;
-        color: #FFC14C;
+        color: #ffc14c;
       }
     }
 
