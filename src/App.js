@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
-import NavOptions from "./pages/NavOptions/NavOptions"
+import NavOptions from "./pages/NavOptions/NavOptions";
 import SideBar from "./components/SideBar/SideBar";
 import Clients from "./pages/Clients";
-
+import Sales from "./pages/Sales";
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
       <div className="App">
         <SideBar />
         <Routes>
-          <Route path="/" element = {<Clients/>}/>
+          <Route path="/" element={<Clients />} />
+          <Route path="/Sales" element={<Sales />} />
         </Routes>
       </div>
       {/*<Login/>*/}

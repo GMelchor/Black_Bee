@@ -3,9 +3,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 2rem 3rem;
-  width: 20rem;
+  padding: 2rem 2rem;
+  width: 16rem;
   height: 100vh;
+  transition:0.5s all ;
 
   .logoContainer {
     display: flex;
@@ -40,8 +41,9 @@
       height: 35px;
       background-color: red;
       cursor: pointer;
-      z-index: 2;
+      z-index: 6;
       opacity: 0;
+      position: relative;
     }
 
     .burgerMenu {
@@ -53,6 +55,7 @@
       height: 3px;
       bottom: calc(35px / 2);
       left: 0.45rem;
+      transition:0.5s all ;
     }
 
     .burgerMenu::after {
@@ -64,6 +67,7 @@
       border-radius: 2rem;
       top: 0.4rem;
       transform: translateY(-0.4rem) rotate(45deg);
+      transition:0.5s all ;
     }
 
     .burgerMenu::before {
@@ -75,6 +79,7 @@
       border-radius: 2rem;
       top: -0.45rem;
       transform: translateY(0.4rem) rotate(-45deg);
+      transition:0.5s all ;
     }
   }
 
@@ -84,9 +89,10 @@
     right: 35px;
     top: (35px / 2);
     z-index: 0;
-    width: calc(6rem + 15rem);
+    width: calc(10rem + 15rem);
     background-color: lightgray;
     height: 2px;
+    transition:0.5s all ;
   }
 
   .profileContainer {
@@ -98,6 +104,7 @@
     img {
       width: auto;
       height: 3rem;
+      border-radius: 15px;
     }
 
     .profileContents {
@@ -142,6 +149,7 @@
         padding: 0.75rem 0;
         width: 100%;
         border-radius: 1rem;
+        cursor: pointer;
 
         .icon-ui {
           margin-right: 0.8rem;
@@ -180,6 +188,7 @@
 
 .sidebar.active {
   width: 3rem;
+  transition:0.5s all ;
 
   .logoContainer.active {
     h2.tittle {
@@ -188,16 +197,20 @@
   }
 
   .burgerContainer.active {
+    transition:0.5s all ;
     .burgerMenu {
       background-color: white;
+      transition:0.5s all ;
     }
 
     .burgerMenu::before {
       transform: translateY(0rem) rotate(0deg);
+      transition:0.5s all ;
     }
 
     .burgerMenu::after {
       transform: translateY(0rem) rotate(0deg);
+      transition:0.5s all ;
     }
   }
 

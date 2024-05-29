@@ -1,0 +1,28 @@
+.ContentSales{
+    margin-left: 8.5rem;
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        align-items: center;
+
+        Button{
+            color: black;
+            font-weight: 600;
+            background-color:#ffc14c ;
+            height: 2rem;
+            margin-right: 1rem;
+
+        }
+        p{
+            font-size: 18px;
+        }
+
+        .inputSelect{
+            width: 35rem;
+            margin-left: 15rem;
+            z-index: 3;
+        }
+    }
+}
