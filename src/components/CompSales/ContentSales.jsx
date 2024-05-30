@@ -14,36 +14,39 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 
 const columns = [
-  { id: "numero", label: "Numero", minWidth: 20 },
-  { id: "fecha", label: "Fecha de creación", minWidth: 40 },
+  { id: "numero", label: "Numero", minWidth: 20, align: "left" },
+  { id: "fecha", label: "Fecha de creación", minWidth: 40, align: "left" },
   {
     id: "cliente",
     label: "Cliente",
     minWidth: 40,
-    align: "right",
+    align: "left",
     format: (value) => value.toLocaleString("en-US"),
   },
   {
     id: "vendedor",
     label: "Vendedor",
     minWidth: 50,
-    align: "right",
+    align: "left",
     format: (value) => value.toLocaleString("en-US"),
   },
   {
     id: "empresa",
     label: "Empresa",
     minWidth: 60,
+    align: "left",
   },
   {
     id: "total",
     label: "Total",
     minWidth: 60,
+    align: "right",
   },
   {
     id: "estado",
     label: "Estado",
     minWidth: 60,
+    align: "left",
   },
 ];
 
@@ -52,9 +55,96 @@ function createData(numero, fecha, cliente, vendedor, empresa, total, estado) {
 }
 
 const rows = [
-  createData(1, "01/01/2023", "Cliente A", "Vendedor 1", "Empresa X", "$100", "Pendiente"),
-  createData(2, "02/01/2023", "Cliente B", "Vendedor 2", "Empresa Y", "$200", "Completado"),
-  createData(3, "03/01/2023", "Cliente C", "Vendedor 3", "Empresa Z", "$300", "En proceso"),
+  createData(
+    1,
+    "01/01/2023",
+    "Juan Pérez",
+    "Vendedor 1",
+    "Tech Solutions",
+    "$100",
+    "Pendiente"
+  ),
+  createData(
+    2,
+    "02/01/2023",
+    "María López",
+    "Vendedor 2",
+    "Innovative Designs",
+    "$200",
+    "Completado"
+  ),
+  createData(
+    3,
+    "03/01/2023",
+    "Carlos García",
+    "Vendedor 3",
+    "Creative Works",
+    "$300",
+    "En proceso"
+  ),
+  createData(
+    4,
+    "04/01/2023",
+    "Ana Martínez",
+    "Vendedor 4",
+    "NextGen Enterprises",
+    "$400",
+    "Pendiente"
+  ),
+  createData(
+    5,
+    "05/01/2023",
+    "Luis Fernández",
+    "Vendedor 5",
+    "Global Innovations",
+    "$500",
+    "Completado"
+  ),
+  createData(
+    6,
+    "06/01/2023",
+    "Elena Rodríguez",
+    "Vendedor 6",
+    "Bright Future Corp",
+    "$600",
+    "En proceso"
+  ),
+  createData(
+    7,
+    "07/01/2023",
+    "Miguel Sánchez",
+    "Vendedor 7",
+    "Visionary Solutions",
+    "$700",
+    "Pendiente"
+  ),
+  createData(
+    8,
+    "08/01/2023",
+    "Laura Gómez",
+    "Vendedor 8",
+    "Pioneering Tech",
+    "$800",
+    "Completado"
+  ),
+  createData(
+    9,
+    "09/01/2023",
+    "José Ramírez",
+    "Vendedor 9",
+    "Advanced Systems",
+    "$900",
+    "En proceso"
+  ),
+  createData(
+    10,
+    "10/01/2023",
+    "Sofía Torres",
+    "Vendedor 10",
+    "Future Enterprises",
+    "$1000",
+    "Pendiente"
+  ),
 ];
 
 const ContentSales = () => {
