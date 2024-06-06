@@ -2,7 +2,7 @@ import React from "react";
 import "./navBarInventory.scss";
 import Button from "@mui/material/Button";
 
-const NavBarSales = () => {
+const NavBarInventory = () => {
   return (
     <div className="NavBarSales">
       <div className="content-NavBarSales">
@@ -16,4 +16,4 @@ const NavBarSales = () => {
   );
 };
 
-export default NavBarSales;
+export default NavBarInventory;
