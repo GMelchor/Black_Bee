@@ -7,6 +7,7 @@ import SideBar from "./components/SideBar/SideBar";
 import Clients from "./pages/Clients";
 import Sales from "./pages/Sales";
 import Inventory from "./pages/Inventory";
+import Empleados from "./pages/Empleados";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Clients />} />
           <Route path="/Sales" element={<Sales />} />
           <Route path="/Inventory" element={<Inventory />} />
+          <Route path="/Empleados" element={<Empleados />} />
         </Routes>
       </div>
       {/*<Login/>*/}

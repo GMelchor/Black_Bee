@@ -79,7 +79,7 @@ const SideBar = () => {
           </li>
           <li className="active">
             <Inventory2OutlinedIcon className="icon-ui" />
-            <a href="/inventario">Inventario</a>
+            <a href="/Inventory">Inventario</a>
           </li>
           <li className="active">
             <AccessibilityIcon  className="icon-ui" />
@@ -87,7 +87,7 @@ const SideBar = () => {
           </li>
           <li className="active">
             <GroupsOutlinedIcon className="icon-ui" />
-            <a href="/empleados">Empleados</a>
+            <a href="/Empleados">Empleados</a>
           </li>
           <li className="active">
             <FactCheckOutlinedIcon className="icon-ui" />

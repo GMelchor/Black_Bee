@@ -1,5 +1,5 @@
 import React from "react";
-import "./contentSales.scss";
+import "./contentInventory.scss";
 import Button from "@mui/material/Button";
 import Select from "react-select";
 import SearchIcon from "@mui/icons-material/Search";
@@ -14,137 +14,91 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 
 const columns = [
-  { id: "numero", label: "Numero", minWidth: 20, align: "left" },
-  { id: "fecha", label: "Fecha de creación", minWidth: 40, align: "left" },
+  { id: "id", label: "ID", minWidth: 20, align: "left" },
+  { id: "codigo_prod", label: "Codigo", minWidth: 40, align: "left" },
+  { id: "descripcion", label: "Descripcion", minWidth: 40, align: "left" },
   {
-    id: "cliente",
-    label: "Cliente",
+    id: "costo",
+    label: "Costo",
     minWidth: 40,
     align: "left",
-    format: (value) => value.toLocaleString("en-US"),
   },
   {
-    id: "vendedor",
-    label: "Vendedor",
+    id: "unidad",
+    label: "Unidad",
     minWidth: 50,
     align: "left",
-    format: (value) => value.toLocaleString("en-US"),
   },
   {
-    id: "empresa",
-    label: "Empresa",
+    id: "cantidad",
+    label: "Cantidad",
     minWidth: 60,
     align: "left",
   },
   {
-    id: "total",
-    label: "Total",
+    id: "ventaA",
+    label: "Venta A",
     minWidth: 60,
-    align: "right",
+    align: "left",
   },
   {
-    id: "estado",
-    label: "Estado",
+    id: "ventaB",
+    label: "Venta B",
     minWidth: 60,
+    align: "left",
+  },
+  {
+    id: "ventastotales",
+    label: "Ventas Totales",
+    maxWidth: 15,
     align: "left",
   },
 ];
 
-function createData(numero, fecha, cliente, vendedor, empresa, total, estado) {
-  return { numero, fecha, cliente, vendedor, empresa, total, estado };
+//función para formatear los valores monetarios
+function formatCurrency(value) {
+  return value.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD"
+  });
+}
+
+
+function createData(
+  id,
+  codigo_prod,
+  descripcion,
+  costo,
+  unidad,
+  ventaA,
+  ventaB,
+  cantidad,
+  ventastotales
+) {
+  return {
+    id,
+    codigo_prod,
+    descripcion,
+    costo: formatCurrency(costo),
+    unidad,
+    ventaA: formatCurrency(ventaA),
+    ventaB: formatCurrency(ventaB),
+    cantidad,
+    ventastotales: formatCurrency(ventastotales),
+  };
 }
 
 const rows = [
-  createData(
-    1,
-    "01/01/2023",
-    "Juan Pérez",
-    "Vendedor 1",
-    "Tech Solutions",
-    "$100",
-    "Pendiente"
-  ),
-  createData(
-    2,
-    "02/01/2023",
-    "María López",
-    "Vendedor 2",
-    "Innovative Designs",
-    "$200",
-    "Completado"
-  ),
-  createData(
-    3,
-    "03/01/2023",
-    "Carlos García",
-    "Vendedor 3",
-    "Creative Works",
-    "$300",
-    "En proceso"
-  ),
-  createData(
-    4,
-    "04/01/2023",
-    "Ana Martínez",
-    "Vendedor 4",
-    "NextGen Enterprises",
-    "$400",
-    "Pendiente"
-  ),
-  createData(
-    5,
-    "05/01/2023",
-    "Luis Fernández",
-    "Vendedor 5",
-    "Global Innovations",
-    "$500",
-    "Completado"
-  ),
-  createData(
-    6,
-    "06/01/2023",
-    "Elena Rodríguez",
-    "Vendedor 6",
-    "Bright Future Corp",
-    "$600",
-    "En proceso"
-  ),
-  createData(
-    7,
-    "07/01/2023",
-    "Miguel Sánchez",
-    "Vendedor 7",
-    "Visionary Solutions",
-    "$700",
-    "Pendiente"
-  ),
-  createData(
-    8,
-    "08/01/2023",
-    "Laura Gómez",
-    "Vendedor 8",
-    "Pioneering Tech",
-    "$800",
-    "Completado"
-  ),
-  createData(
-    9,
-    "09/01/2023",
-    "José Ramírez",
-    "Vendedor 9",
-    "Advanced Systems",
-    "$900",
-    "En proceso"
-  ),
-  createData(
-    10,
-    "10/01/2023",
-    "Sofía Torres",
-    "Vendedor 10",
-    "Future Enterprises",
-    "$1000",
-    "Pendiente"
-  ),
+  createData(1, "A001", "Zapatos Deportivos", 100, "piezas", 120, 130, 50, 6000),
+  createData(2, "A002", "Camisetas", 200, "piezas", 220, 230, 60, 12000),
+  createData(3, "A003", "Pantalones", 300, "piezas", 320, 330, 70, 21000),
+  createData(4, "A004", "Sombreros", 400, "cajas", 420, 430, 80, 32000),
+  createData(5, "A005", "Calcetines", 500, "cajas", 520, 530, 90, 45000),
+  createData(6, "A006", "Mochilas", 600, "piezas", 620, 630, 100, 60000),
+  createData(7, "A007", "Lentes de Sol", 700, "cajas", 720, 730, 110, 77000),
+  createData(8, "A008", "Relojes", 800, "piezas", 820, 830, 120, 96000),
+  createData(9, "A009", "Cinturones", 900, "cajas", 920, 930, 130, 117000),
+  createData(10, "A010", "Chaquetas", 1000, "piezas", 1020, 1030, 140, 140000),
 ];
 
 const ContentInventory = () => {
@@ -161,14 +115,16 @@ const ContentInventory = () => {
   };
 
   return (
-    <div className="ContentSales">
+    <div className="ContentInventory">
       <div className="header">
         <Button variant="contained">Nuevo</Button>
-        <p>Cotizaciones</p>
+        <p>Inventario</p>
         <RequestQuoteOutlinedIcon />
-        <Select className="inputSelect" type="text" placeholder="Buscar.....">
-          <SearchIcon className="icon" />
-        </Select>
+        <Select
+          className="inputSelect"
+          type="text"
+          placeholder="Buscar....."
+        ></Select>
       </div>
       <div className="table-sales">
         <Paper sx={{ width: "98%", overflow: "hidden" }}>

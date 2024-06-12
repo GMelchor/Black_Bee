@@ -1,9 +1,13 @@
 import React from "react";
+import NavBarInventory from "../components/CompInventory/NavBarInventory";
+import ContentInventory from "../components/CompInventory/ContentInventory";
+
 
 const Inventory = () => {
   return (
     <div>
-      <h1>hola</h1>
+      <NavBarInventory/>
+      <ContentInventory/>
     </div>
   );
 };

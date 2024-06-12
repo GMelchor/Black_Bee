@@ -1,0 +1,70 @@
+.ContentEmpleados {
+  margin-left: 7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    grid-column: 1 / 5;
+
+    Button {
+      color: black;
+      font-weight: 600;
+      background-color: #ffc14c;
+      height: 2rem;
+      margin-right: 1rem;
+    }
+    p {
+      font-size: 18px;
+    }
+
+    .inputSelect {
+      width: 35rem;
+      margin-left: 15rem;
+      z-index: 3;
+    }
+  }
+
+  .contact-card {
+    background-color: #fff;
+    padding: 16px;
+    margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+    display: flex;
+
+    .avatar {
+      width: 3rem;
+      border-radius: 20px;
+      height: 45%;
+      margin: 1rem .5rem 0rem 0rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centra el contenido verticalmente */
+      overflow: hidden; /* Evita que el texto se desborde si es demasiado largo */
+      .name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      .email {
+        font-size: 16px;
+        pointer-events: none;
+      }
+
+      .Icon{
+        width: 16px; 
+        margin-left: 15px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
